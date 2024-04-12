@@ -3,6 +3,7 @@ import random
 import google.generativeai as genai
 import streamlit as st
 import time
+import streamlit.config as config
 #Setting the page configuration
 st.set_page_config(
     page_title="AgriBot",

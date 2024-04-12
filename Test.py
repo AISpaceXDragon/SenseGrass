@@ -10,6 +10,9 @@ st.set_page_config(
     page_icon=":chart_with_upwards_trend:",
     
 )
+config.set_option("theme.base", "light")
+config.set_option("theme.backgroundColor", "#f6fff9")
+config.set_option("theme.secondaryBackgroundColor", "#ddf0df")
 #Setting the header and subheader
 st.header("Gemini LLM Powered Chat Bot",divider="rainbow")
 st.subheader("Ask me anything about anything and I will try to help you out.")

@@ -39,7 +39,7 @@ def confirm_clear_history():#Perfectly working
             msg.empty()
 #Creating the sidebar
 with st.sidebar:
-    gemini_api_key = st.text_input("Enter your Gemini API Key", key="chatbot_api_key", type="password",)
+    gemini_api_key = st.text_input("Enter your Gemini API Key", key="chatbot_api_key", type="password")
     if gemini_api_key != '':
         msg = st.empty()
         msg.success('Thank You for providing API key.', icon='✅')
@@ -48,7 +48,7 @@ with st.sidebar:
         st.write("Powered by [GenerativeAI](https://generativeai.com/)")
         st.warning("NOTE: This model may generate inaccurate responses. Kindly use with caution. Do not enter any sensitive information.", icon="⚠️")
         #st.session_state.chat_history = st.session_state.chat_history.append[st.session_state.chat]
-    "[View the source code](https://github.com/streamlit/llm-examples/blob/main/Chatbot.py)"
+    "[View the source code](https://github.com/AISpaceXDragon/SenseGrass/blob/main/Test.py)"
 #Checking if the API key is empty
 if gemini_api_key == "":
         st.info("""Please enter your Gemini API key before you continue.

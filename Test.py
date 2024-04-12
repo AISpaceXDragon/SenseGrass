@@ -3,7 +3,6 @@ import random
 import google.generativeai as genai
 import streamlit as st
 import time
-import base64
 #Setting the page configuration
 st.set_page_config(
     page_title="AgriBot",
@@ -11,26 +10,6 @@ st.set_page_config(
     page_icon=":chart_with_upwards_trend:",
     
 )
-def get_img_as_base64(file):
-    with open(file, "rb") as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-img = get_img_as_base64("/Users/srimanthdhondy/Programs/Project_SenseGrass/HD-wallpaper-grass-wicker-texture-grass-weave-texture-macro-green-background-grass-textures-green-grass-texture-grass-from-top-grass-background-green-grass.jpg")
-pg_bg = """<style>
-[data-testid="stApp"]
-{
-    background-image: url("data:image/jpg;base64,{img}")
-    background-position: center;
-    background-color: #f6fff9;
-}
-[data-testid="stSidebar"] > div:first-child
-{{
-   background-image: url("data:image/jpg;base64,""" + img + """")
-   background-position: center;
-}}
-</style>"""
-st.markdown(pg_bg, unsafe_allow_html=True)
 #Setting the header and subheader
 st.header("Gemini LLM Powered Chat Bot",divider="rainbow")
 st.subheader("Ask me anything about anything and I will try to help you out.")
